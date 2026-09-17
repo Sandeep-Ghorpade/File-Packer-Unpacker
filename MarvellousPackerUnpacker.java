@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name : Marvellous Packer Unpacker Activity
+// Function Name : Packer Unpacker Activity
 // Description   : Combines file packing and unpacking operations in one application
 // Input         : Directory name (for packing) or packed file name (for unpacking)
 // Author        : Sandeep Sanjay Ghorpade
@@ -11,12 +11,12 @@
 import java.io.*;
 import java.util.*;
 
-class MarvellousPacker
+class Packer
 {
     private String DirectoryName;
     private String PackFileName;
 
-    public MarvellousPacker(String dir, String packName)
+    public Packer(String dir, String packName)
     {
         this.DirectoryName = dir;
         this.PackFileName = packName;
@@ -31,7 +31,7 @@ class MarvellousPacker
         try
         {
             System.out.println("--------------------------------------------------------");
-            System.out.println("----------- Marvellous Packer Unpacker -----------------");
+            System.out.println("----------- Packer Unpacker -----------------");
             System.out.println("--------------------------------------------------------");
             System.out.println("------------------- Packing Activity -------------------");
             System.out.println("--------------------------------------------------------");
@@ -94,11 +94,11 @@ class MarvellousPacker
     }
 }
 
-class MarvellousUnpacker
+class Unpacker
 {
     private String PackName;
 
-    public MarvellousUnpacker(String A)
+    public Unpacker(String A)
     {
         this.PackName = A;
     }
@@ -108,7 +108,7 @@ class MarvellousUnpacker
         try
         {
             System.out.println("--------------------------------------------------------");
-            System.out.println("----------- Marvellous Packer Unpacker -----------------");
+            System.out.println("----------- Packer Unpacker -----------------");
             System.out.println("--------------------------------------------------------");
             System.out.println("----------------- UnPacking Activity -------------------");
             System.out.println("--------------------------------------------------------");
@@ -165,7 +165,7 @@ class MarvellousUnpacker
     }
 }
 
-public class MarvellousPackerUnpacker
+public class PackerUnpacker
 {
     public static void main(String A[])
     {
@@ -174,7 +174,7 @@ public class MarvellousPackerUnpacker
         try
         {
             System.out.println("--------------------------------------------------------");
-            System.out.println("----------- Marvellous Packer Unpacker -----------------");
+            System.out.println("----------- Packer Unpacker -----------------");
             System.out.println("--------------------------------------------------------");
             System.out.println("1 : Pack files from directory");
             System.out.println("2 : Unpack files from packed file");
@@ -193,7 +193,7 @@ public class MarvellousPackerUnpacker
                     System.out.print("Enter name for packed file : ");
                     String packedFile = sobj.nextLine();
 
-                    MarvellousPacker pobj = new MarvellousPacker(dirName, packedFile);
+                    Packer pobj = new Packer(dirName, packedFile);
                     pobj.PackingActivity();
                     break;
 
@@ -201,7 +201,7 @@ public class MarvellousPackerUnpacker
                     System.out.print("Enter the name of packed file to unpack : ");
                     String packName = sobj.nextLine();
 
-                    MarvellousUnpacker uobj = new MarvellousUnpacker(packName);
+                    Unpacker uobj = new Unpacker(packName);
                     uobj.UnpackingActivity();
                     break;
 
